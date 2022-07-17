@@ -10,7 +10,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # Caching dependencies
 COPY package.json /app/package.json
 RUN npm install
-RUN npm install react-scripts -g
+RUN npm install react-scripts@5.0.1 -g
 
 # Start application
 CMD ["npm", "start"]
