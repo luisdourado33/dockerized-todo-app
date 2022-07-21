@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ContextProvider } from "./contexts/app-context";
 
 import routes from "./config/routes";
 
@@ -14,9 +15,11 @@ const Application: React.FC<{}> = () => {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>{renderRoutes}</Routes>
-      </BrowserRouter>
+      <ContextProvider>
+        <BrowserRouter>
+          <Routes>{renderRoutes}</Routes>
+        </BrowserRouter>
+      </ContextProvider>
     </>
   );
 };
