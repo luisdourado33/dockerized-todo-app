@@ -1,9 +1,7 @@
 import React from "react";
 import { ThemeProvider as Provider } from "styled-components";
 
-import theme from "./styles";
-
-const ThemeProvider: React.FC<any> = ({ children }) => {
+const ThemeProvider: React.FC<any> = ({ children, theme }) => {
   return <Provider theme={theme}>{children}</Provider>;
 };
 

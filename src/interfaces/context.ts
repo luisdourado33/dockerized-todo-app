@@ -1,3 +1,5 @@
+import { ThemeProps } from "./theme";
+
 export interface ITask {
   id: number;
   title: string;
@@ -8,6 +10,7 @@ export interface ITask {
 }
 
 export type AppProps = {
+  theme: ThemeProps;
   tasks: ITask[];
   saveTask: (task: ITask) => boolean;
   deleteTask: (taskId: number) => boolean;

@@ -1,0 +1,16 @@
+import React from "react";
+import styled from "styled-components";
+
+const Button = styled.button`
+  color: #ffff;
+  font-weight: bold;
+  background-color: ${(props) => props.theme.light.primary};
+  padding: 5px;
+  border: 0px solid transparent;
+  border-radius: 5px;
+`;
+
+const CustomButton: React.FC<any> = ({ children }) => (
+  <Button>{children}</Button>
+);
+export default CustomButton;
