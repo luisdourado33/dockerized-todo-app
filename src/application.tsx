@@ -5,7 +5,11 @@ import routes from "./config/routes";
 
 const Application: React.FC<{}> = () => {
   const renderRoutes: any = routes.map((route, index) => (
-    <Route key={index} {...route} element={<route.element />} />
+    <Route
+      key={index}
+      {...route}
+      element={<route.element name={route.name} {...route.props} />}
+    />
   ));
 
   return (
