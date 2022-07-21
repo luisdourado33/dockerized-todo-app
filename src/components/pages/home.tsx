@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
-// eslint-disable-next-line no-unused-vars
+import React from "react";
 import IPage from "../../interfaces/page";
 
 const HomePage: React.FC<IPage> = ({ name }) => {
-  useEffect(() => {
-    console.log(`[${name}] rendering`);
-  }, []);
-
   return (
     <div>
       <h1>Homepage</h1>
