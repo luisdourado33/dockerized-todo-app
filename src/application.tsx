@@ -4,7 +4,7 @@ import { ContextProvider } from "./contexts/app-context";
 
 import routes from "./config/routes";
 
-const Application: React.FC<{}> = () => {
+const Application: React.FC<any> = () => {
   const renderRoutes: any = routes.map((route, index) => (
     <Route
       key={index}

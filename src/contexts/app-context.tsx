@@ -4,7 +4,7 @@ import { AppProps, ITask } from "../interfaces/context";
 import { ThemeProps } from "../interfaces/theme";
 
 import ThemeProvider from "../theme";
-import themeInitials from "../theme/styles";
+import themeInitials from "../config/theme";
 
 export const AppContext = createContext<AppProps | null>(null);
 
@@ -33,7 +33,7 @@ export const ContextProvider: React.FC<any> = ({ children }) => {
 
   const switchTheme = (): void => {
     setTheme((prev) => {
-      let newTheme = { ...prev };
+      const newTheme = { ...prev };
       newTheme["current"] = prev.current === "light" ? "dark" : "light";
       return newTheme;
     });
