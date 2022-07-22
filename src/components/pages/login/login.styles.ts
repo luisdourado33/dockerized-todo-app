@@ -40,9 +40,15 @@ export const LeftBox = styled.div`
   }
 `;
 
-export const RightBox = styled.div`
+export const RightBox = styled.div<{ src: string }>`
+  display: flex;
+  flex-direction: column;
   width: 500px;
   height: 500px;
+  background-image: url(${(props) => props.src});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: ${(props) => props.theme.colors.primary};
   padding: 15px;
 
