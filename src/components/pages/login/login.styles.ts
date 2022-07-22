@@ -2,55 +2,51 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.secondary};
-  place-content: center;
-  place-items: center;
   display: flex;
   width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  place-content: center;
+  place-items: center;
 
   @media (max-width: 414px) {
-    place-items: start;
-    place-content: start;
   }
 `;
 
 export const Wrapper = styled.div`
-  width: 90%;
-  height: 600px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 
-  & > div {
-    padding: 15px;
-  }
-
-  @media (max-width: 414px) {
+  @media (max-width: 1136px) {
     flex-direction: column;
-    justify-content: stretch;
+    place-content: center;
+    place-items: center;
   }
 `;
 
 export const LeftBox = styled.div`
-  width: 50%;
-  background-color: #123123;
-  color: #fff;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: ${(props) => props.theme.colors.light};
+  padding: 100px;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
   @media (max-width: 414px) {
     width: 100%;
+    height: fit-content;
+    border-radius: 15px;
+    place-content: center;
+    place-items: center;
   }
 `;
 
 export const RightBox = styled.div`
-  width: 50%;
+  width: 500px;
+  height: 500px;
   background-color: ${(props) => props.theme.colors.primary};
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 15px;
 
   @media (max-width: 414px) {
-    width: 100%;
+    display: none;
   }
 `;
