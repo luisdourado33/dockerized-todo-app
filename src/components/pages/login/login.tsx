@@ -44,6 +44,7 @@ const LoginPage: React.FC<IPage> = () => {
     </Container>
   );
 };
+
 const BOX_IMAGE_SRC =
   "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1478&q=80";
 export default LoginPage;
