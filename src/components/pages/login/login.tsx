@@ -2,10 +2,17 @@
 import React from "react";
 import IPage from "../../../interfaces/page";
 
-import { Container } from "./login.styles";
+import { Container, LeftBox, RightBox, Wrapper } from "./login.styles";
 
 const LoginPage: React.FC<IPage> = () => {
-  return <Container>Olá mundo</Container>;
+  return (
+    <Container>
+      <Wrapper>
+        <LeftBox>Teste I</LeftBox>
+        <RightBox>Teste II</RightBox>
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default LoginPage;

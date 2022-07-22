@@ -5,9 +5,11 @@ const theme: ThemeProps = {
   current: "light",
   colors: {
     light: {
-      primary: "#343434",
+      primary: "green",
     },
-    dark: {},
+    dark: {
+      primary: "red",
+    },
   },
 };
 
