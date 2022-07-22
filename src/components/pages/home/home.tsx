@@ -6,6 +6,7 @@ import { AppContext } from "../../../contexts/app-context";
 import IPage from "../../../interfaces/page";
 
 import CustomButton from "../../atoms/custom-button";
+import Foo from "../../atoms/foo";
 
 const HomePage: React.FC<IPage | any> = ({ theme }) => {
   const { switchTheme } = React.useContext<any>(AppContext);
@@ -19,6 +20,8 @@ const HomePage: React.FC<IPage | any> = ({ theme }) => {
       <CustomButton onClick={handleChangeTheme}>
         Current theme: {theme.current} (click to switch)
       </CustomButton>
+
+      <Foo />
     </div>
   );
 };
