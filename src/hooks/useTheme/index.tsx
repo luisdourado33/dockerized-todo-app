@@ -6,7 +6,7 @@ import THEME_CONFIGS from "../../config/theme";
 const useTheme: any = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeProps>(THEME_CONFIGS);
 
-  const handleSetCurrentTheme = () => {
+  const switchTheme = (): void => {
     setCurrentTheme((values) => {
       return {
         ...values,
@@ -20,12 +20,21 @@ const useTheme: any = () => {
   };
 
   useEffect(() => {
+    setCurrentTheme((prev) => {
+      return {
+        ...prev,
+        colors:
+          currentTheme.current === "light"
+            ? THEME_CONFIGS.colors.light
+            : THEME_CONFIGS.colors.dark,
+      };
+    });
     return function cleanup() {
       setCurrentTheme(THEME_CONFIGS);
     };
   }, []);
 
-  return [currentTheme, handleSetCurrentTheme];
+  return [currentTheme, switchTheme];
 };
 
 export default useTheme;
