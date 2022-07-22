@@ -1,15 +1,13 @@
 import React, { createContext, useState } from "react";
-
-import { AppProps, ITask } from "../interfaces/context";
-import { ThemeProps } from "../interfaces/theme";
+import useTheme from "../hooks/useTheme";
 
 import ThemeProvider from "../theme";
-import themeInitials from "../config/theme";
+import { AppProps, ITask } from "../interfaces/context";
 
 export const AppContext = createContext<AppProps | null>(null);
 
 export const ContextProvider: React.FC<any> = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeProps>(themeInitials);
+  const [theme, switchTheme] = useTheme();
   const [tasks, setTasks] = useState<ITask[]>([]);
 
   const saveTask = (task: ITask): boolean => {
@@ -29,14 +27,6 @@ export const ContextProvider: React.FC<any> = ({ children }) => {
     }
 
     return false;
-  };
-
-  const switchTheme = (): void => {
-    setTheme((prev) => {
-      const newTheme = { ...prev };
-      newTheme["current"] = prev.current === "light" ? "dark" : "light";
-      return newTheme;
-    });
   };
 
   const valueMapped = {
