@@ -7,14 +7,23 @@ import { ThemeProps, ThemeSchemes } from "../interfaces/theme";
  * object will be considered as
  * the default version for the theme.
  */
+
+const defaultColors = {
+  light: "#FFFF",
+};
+
 const theme: ThemeProps = {
   current: ThemeSchemes.Light,
   colors: {
     light: {
-      primary: "green",
+      ...defaultColors,
+      primary: "#5B00D0",
+      secondary: "#E9E6F2",
     },
     dark: {
-      primary: "red",
+      ...defaultColors,
+      primary: "#5B00D0",
+      secondary: "#242424",
     },
   },
 };

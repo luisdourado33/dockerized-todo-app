@@ -4,6 +4,9 @@ import { ContextProvider } from "./contexts/app-context";
 
 import routes from "./config/routes";
 
+import FixedComponent from "./components/organisms/fixed-component/fixed-component";
+import GlobalStyles from "./config/globalStyles";
+
 const Application: React.FC<any> = () => {
   const renderRoutes: any = routes.map((route, index) => (
     <Route
@@ -14,13 +17,13 @@ const Application: React.FC<any> = () => {
   ));
 
   return (
-    <>
-      <ContextProvider>
-        <BrowserRouter>
-          <Routes>{renderRoutes}</Routes>
-        </BrowserRouter>
-      </ContextProvider>
-    </>
+    <ContextProvider style={{ backgroundColor: "red" }}>
+      <GlobalStyles />
+      <FixedComponent />
+      <BrowserRouter>
+        <Routes>{renderRoutes}</Routes>
+      </BrowserRouter>
+    </ContextProvider>
   );
 };
 

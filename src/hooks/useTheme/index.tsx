@@ -11,7 +11,10 @@ const useTheme: any = () => {
     setCurrentTheme((values: any) => {
       return {
         ...values,
-        current: values.current == ThemeSchemes.Light ? "dark" : "light",
+        current:
+          values.current == ThemeSchemes.Light
+            ? ThemeSchemes.Dark
+            : ThemeSchemes.Light,
         colors:
           values.current == ThemeSchemes.Light
             ? getCurrentColors(ThemeSchemes.Dark)
