@@ -1,6 +1,6 @@
 export enum ThemeSchemes {
-  Light,
-  Dark,
+  Light = "light",
+  Dark = "dark",
 }
 
 export interface ThemeProps {
