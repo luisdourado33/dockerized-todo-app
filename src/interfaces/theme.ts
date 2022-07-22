@@ -1,4 +1,9 @@
+export enum ThemeSchemes {
+  Light,
+  Dark,
+}
+
 export interface ThemeProps {
-  current: "light" | "dark";
+  current: ThemeSchemes;
   colors: any;
 }

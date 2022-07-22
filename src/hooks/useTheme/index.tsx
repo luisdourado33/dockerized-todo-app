@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { ThemeProps } from "../../interfaces/theme";
+import { ThemeProps, ThemeSchemes } from "../../interfaces/theme";
+import { getCurrentColors } from "../../utils/theme";
 
 import THEME_CONFIGS from "../../config/theme";
 
@@ -7,28 +8,23 @@ const useTheme: any = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeProps>(THEME_CONFIGS);
 
   const switchTheme = (): void => {
-    setCurrentTheme((values) => {
+    setCurrentTheme((values: any) => {
       return {
         ...values,
-        current: values.current == "light" ? "dark" : "light",
+        current: values.current == ThemeSchemes.Light ? "dark" : "light",
         colors:
-          values.current == "light"
-            ? THEME_CONFIGS.colors.dark
-            : THEME_CONFIGS.colors.light,
+          values.current == ThemeSchemes.Light
+            ? getCurrentColors(ThemeSchemes.Dark)
+            : getCurrentColors(ThemeSchemes.Light),
       };
     });
   };
 
   useEffect(() => {
     setCurrentTheme((prev) => {
-      return {
-        ...prev,
-        colors:
-          currentTheme.current === "light"
-            ? THEME_CONFIGS.colors.light
-            : THEME_CONFIGS.colors.dark,
-      };
+      return { ...prev, colors: getCurrentColors(prev.current) };
     });
+
     return function cleanup() {
       setCurrentTheme(THEME_CONFIGS);
     };
