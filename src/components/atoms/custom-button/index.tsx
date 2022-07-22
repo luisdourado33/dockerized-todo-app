@@ -4,8 +4,7 @@ import styled from "styled-components";
 const Button = styled.button`
   color: #ffff;
   font-weight: bold;
-  background-color: ${(props) =>
-    props.theme.current === "light" ? "red" : "blue"};
+  background-color: ${(props) => props.theme.colors.primary};
   padding: 5px;
   border: 0px solid transparent;
   border-radius: 5px;
