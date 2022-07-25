@@ -25,8 +25,14 @@ const InputComponent = styled.input`
   font-size: 15px;
   border: 1.5px solid ${(props) => props.theme.colors.secondary};
   transition: border-color 0.5s;
+  background-color: transparent;
 
   &:focus {
+    outline: none;
+    border-color: ${(props) => props.theme.colors.brand};
+  }
+
+  &:hover {
     outline: none;
     border-color: ${(props) => props.theme.colors.brand};
   }
