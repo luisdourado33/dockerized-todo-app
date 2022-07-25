@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
 export const LeftBox = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${(props) => props.theme.colors.light};
+  background-color: ${(props) => props.theme.colors.secondaryAlt};
   padding: 100px;
 
   border-top-left-radius: 15px;

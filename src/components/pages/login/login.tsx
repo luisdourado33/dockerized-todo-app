@@ -9,6 +9,7 @@ import TextDescription from "../../atoms/text-description/text-description";
 import InputWithLabel from "../../atoms/input-with-label/input-with-label";
 import CustomButton from "../../atoms/custom-button";
 import SwitchThemeButton from "../../atoms/switch-theme-button/switch-theme-button";
+import CustomCheckbox from "../../atoms/custom-checkbox/custom-checkbox";
 
 const LoginPage: React.FC<IPage> = () => {
   return (
@@ -32,7 +33,16 @@ const LoginPage: React.FC<IPage> = () => {
               placeholder="********"
               type="password"
             />
-            <CustomButton>Sign In</CustomButton>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "fit-content",
+              }}
+            >
+              <CustomCheckbox label="Remember-me" checked />
+              <CustomButton>Sign In</CustomButton>
+            </div>
           </form>
         </LeftBox>
         <RightBox src={BOX_IMAGE_SRC}>
