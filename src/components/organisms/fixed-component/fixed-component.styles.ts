@@ -7,6 +7,12 @@ export const Navbar = styled.div`
   padding: 15px;
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  height: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 20px;
+  align-items: center;
+  background-color: ${(props) => props.theme.colors.secondaryAlt};
 `;
 
 export const Menu = styled.nav`
