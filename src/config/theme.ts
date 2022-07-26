@@ -14,7 +14,7 @@ const defaultColors = {
 };
 
 const theme: ThemeProps = {
-  current: ThemeSchemes.Dark,
+  current: ThemeSchemes.Light,
   colors: {
     light: {
       ...defaultColors,
@@ -23,6 +23,7 @@ const theme: ThemeProps = {
       secondaryAlt: "#F7F3FF",
       tertiary: "#131629",
       lightGray: "#7A7F8D",
+      sideMenu: "",
     },
     dark: {
       ...defaultColors,
@@ -31,6 +32,7 @@ const theme: ThemeProps = {
       secondaryAlt: "#1D1D1F",
       tertiary: "#5b00d0",
       lightGray: "#7A7F8D",
+      sideMenu: "",
     },
   },
 };
