@@ -7,24 +7,24 @@ export const Container = styled.div`
   display: flex;
 `;
 export const NavMenu = styled.aside`
-  background-color: ${(props) => props.theme.colors.secondaryAlt};
+  border: 1px solid;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-left-color: transparent;
+  border-right-color: ${(props) => props.theme.colors.secondary};
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+
+  width: 100px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  height: 100%;
-  transition: all 1s;
-  border-width: 1px solid transparent;
-  justify-content: space-between;
-
-  .items {
-    display: flex;
-    flex-direction: column;
-  }
+  background-color: ${(props) => props.theme.colors.primary};
 `;
 export const Content = styled.main`
   background-color: ${(props) => props.theme.colors.secondaryAlt};
-  margin: 15px;
   border-radius: 15px;
-  padding: 15px;
-  height: 90%;
+  margin: 30px;
+  width: 100%;
+  display: flex;
 `;
