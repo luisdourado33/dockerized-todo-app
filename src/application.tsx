@@ -8,9 +8,6 @@ import FixedComponent from "./components/organisms/fixed-component/fixed-compone
 import GlobalStyles from "./config/globalStyles";
 
 const Application: React.FC<any> = () => {
-  const test  = "hello world  "
-  console
-    .log(test)
   const renderRoutes: any = routes.map((route, index) => (
     <Route
       key={index}
