@@ -26,6 +26,7 @@ const InputComponent = styled.input`
   border: 1.5px solid ${(props) => props.theme.colors.secondary};
   transition: border-color 0.5s;
   background-color: transparent;
+  color: ${(props) => props.theme.colors.primary};
 
   &:focus {
     outline: none;
