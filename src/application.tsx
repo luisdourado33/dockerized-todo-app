@@ -4,7 +4,7 @@ import { ContextProvider } from "./contexts/app-context";
 
 import routes from "./config/routes";
 
-// import FixedComponent from "./components/organisms/fixed-component/fixed-component";
+import FixedComponent from "./components/organisms/fixed-component/fixed-component";
 import GlobalStyles from "./config/globalStyles";
 
 const Application: React.FC<any> = () => {
@@ -19,7 +19,7 @@ const Application: React.FC<any> = () => {
   return (
     <ContextProvider style={{ backgroundColor: "red" }}>
       <GlobalStyles />
-      {/* <FixedComponent /> */}
+      <FixedComponent />
       <BrowserRouter>
         <Routes>{renderRoutes}</Routes>
       </BrowserRouter>
