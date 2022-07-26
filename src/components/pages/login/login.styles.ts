@@ -9,17 +9,12 @@ export const Container = styled.div`
   place-items: center;
 
   @media (max-width: 414px) {
+    height: 100%;
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
-
-  @media (max-width: 1136px) {
-    flex-direction: column;
-    place-content: center;
-    place-items: center;
-  }
 `;
 
 export const LeftBox = styled.div`
@@ -32,11 +27,12 @@ export const LeftBox = styled.div`
   border-bottom-left-radius: 15px;
 
   @media (max-width: 414px) {
-    width: 100%;
+    width: auto;
     height: fit-content;
+    padding: 50px;
     border-radius: 15px;
-    place-content: center;
-    place-items: center;
+    place-content: start;
+    place-items: start;
   }
 `;
 
@@ -52,7 +48,7 @@ export const RightBox = styled.div<{ src: string }>`
   background-color: ${(props) => props.theme.colors.primary};
   padding: 15px;
 
-  @media (max-width: 414px) {
+  @media (max-width: 1136px) {
     display: none;
   }
 `;

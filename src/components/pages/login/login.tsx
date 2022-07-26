@@ -8,7 +8,6 @@ import TextHeading from "../../atoms/text-heading/text-heading";
 import TextDescription from "../../atoms/text-description/text-description";
 import InputWithLabel from "../../atoms/input-with-label/input-with-label";
 import CustomButton from "../../atoms/custom-button";
-import SwitchThemeButton from "../../atoms/switch-theme-button/switch-theme-button";
 import CustomCheckbox from "../../atoms/custom-checkbox/custom-checkbox";
 
 const LoginPage: React.FC<IPage> = () => {
@@ -45,11 +44,7 @@ const LoginPage: React.FC<IPage> = () => {
             </div>
           </form>
         </LeftBox>
-        <RightBox src={BOX_IMAGE_SRC}>
-          <SwitchThemeButton
-            style={{ width: "fit-content", alignSelf: "flex-end" }}
-          />
-        </RightBox>
+        <RightBox src={BOX_IMAGE_SRC} />
       </Wrapper>
     </Container>
   );
