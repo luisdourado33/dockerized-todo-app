@@ -5,16 +5,18 @@ import { MenuItemProps } from "../../../interfaces/menu";
 
 const Item = styled.a`
   text-decoration: none;
-  padding-inline: 15px;
-  padding-block: 7.5px;
-  transition: background-color 0.5s;
-  color: ${(props) => props.theme.colors.lightGray};
+  padding-block: 5px;
+  transition: all 0.2s;
+  color: ${(props) => props.theme.colors.secondary};
+  font-size: auto;
+  font-weight: bold;
   text-align: left;
   width: auto;
-  font-size: auto;
+  border-radius: inherit;
+
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
-    color: #000;
+    color: #000000;
   }
 `;
 
